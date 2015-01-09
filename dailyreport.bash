@@ -50,7 +50,8 @@ if [[ $1 == "test" ]]; then
 else 
     RECIVERS=$(config recivers)
     for RECIVER in $RECIVERS; do
-        cat $MAIL | mail -a 'Content-Type: text/html' -s "Dailyreport for $HOSTNAME $DATE_YESTERDAY" $RECIVER
+#        cat $MAIL | mail -a 'Content-Type: text/html' -s "Dailyreport for $HOSTNAME $DATE_YESTERDAY" $RECIVER
+    mutt -e 'set content_type=text/html' -s "Dailyreport for $HOSTNAME $DATE_YESTERDAY" "$RECIVER" < $MAIL
     done
 fi
 
