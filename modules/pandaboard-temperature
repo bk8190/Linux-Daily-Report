@@ -1,0 +1,13 @@
+#cat /sys/bus/platform/devices/temp_sensor_hwmon.0/temp1_input
+#
+#cpufan=$(sensors | grep "CPU Fan Speed" | awk '{print $4, $5}')
+#
+#echo "CPU Temp: " $cputemp
+#echo "M/B Temp: " $mbtemp
+#echo "CPU Fan: " $cpufan
+
+TEMPERATURE=$(cat /sys/bus/platform/devices/temp_sensor_hwmon.0/temp1_input)
+DIVIDER=1000
+RESULT=$(echo "scale=1; $TEMPERATURE/$DIVIDER" | bc -l)
+
+echo "CPU Temperature: " $RESULT "C"
