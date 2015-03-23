@@ -1,0 +1,3 @@
+#!/bin/bash
+echo "******************** Software Updates ********************"
+/usr/lib/update-notifier/update-motd-updates-available

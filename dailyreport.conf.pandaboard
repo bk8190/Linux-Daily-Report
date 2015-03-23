@@ -1,4 +1,4 @@
 # oh yes +1
 #modules=df fail2ban filesPrUser general mdadmraid mysql processesPrUser smartdata systemp topmemory ufw ups
-modules=
+modules=general apt-packages pandaboard-temperature topmemory diskspace openPorts whyYouShouldReadAll
 recivers=TODO
