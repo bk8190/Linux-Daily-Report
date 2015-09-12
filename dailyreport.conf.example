@@ -1,3 +1,3 @@
 #modules=df fail2ban filesPrUser general mdadmraid mysql processesPrUser smartdata systemp topmemory ufw ups
-modules=general topmemory diskspace openPorts whyYouShouldReadAll
-recivers=NOBODY
+modules=general topmemory diskspace apt-packages openPorts whyYouShouldReadAll
+recivers=root
